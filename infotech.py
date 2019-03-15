@@ -107,7 +107,6 @@ def main(argv):
         print "csv_lineobj - print LINEOBJS section of .xml file to stdout as .CSV file"
         print "csv_defect - print DEFECTS section of .xml file to stdout as .CSV file"
         print "reverse - revert vector of objects in .xml file and print result as .XML file to stdout"
-        print "fix - repair data for umdp-1400 tool in PIGPASS section of xml file"
         print "join file1.xml 1100 file2.xml - print outer joined result xml file"
 
         return 1
