@@ -35,8 +35,7 @@ def cmd_csv_welds(info, argv):
     """
     dump WELDS section as csv
     """
-    with_navigation = get_navigation(argv)
-    print info.welds.as_csv(with_navigation=with_navigation)
+    print info.welds.as_csv(with_navigation=get_navigation(argv))
     return 0
 
 
@@ -44,8 +43,7 @@ def cmd_csv_defects(info, argv):
     """
     dump DEFECTS section as csv
     """
-    with_navigation = get_navigation(argv)
-    print info.defects.as_csv(with_navigation=with_navigation)
+    print info.defects.as_csv(with_navigation=get_navigation(argv))
     return 0
 
 
@@ -53,8 +51,7 @@ def cmd_csv_lineobjects(info, argv):
     """
     dump LINEOBJS section as csv
     """
-    with_navigation = get_navigation(argv)
-    print info.lineobjects.as_csv(with_navigation=with_navigation)
+    print info.lineobjects.as_csv(with_navigation=get_navigation(argv))
     return 0
 
 
@@ -82,8 +79,16 @@ def cmd_join(info, argv):
     return 0
 
 
+def cmd_stub(_info, _argv):
+    """
+    join several xml files and connect tubes
+    """
+    print "Not implemented yet"
+    return 0
+
+
 COMMANDS = {
-  Commands.MAKEMONEY: None,
+  Commands.MAKEMONEY: cmd_stub,
   Commands.REVERSE: cmd_reverse,
   Commands.CSV_WELD: cmd_csv_welds,
   Commands.CSV_DEFECT: cmd_csv_defects,
@@ -117,17 +122,12 @@ def main(argv):
 
     try:
         info = Infotech.from_file(argv[2])
-
     except IOError as exc:
         print exc
         return 1
 
     command = COMMANDS[argv[1]]
-    if command:
-        return command(info, argv)
-
-    print "Not implemented yet"
-    return 0
+    return command(info, argv)
 
 
 if __name__ == '__main__':  # pragma: no cover
