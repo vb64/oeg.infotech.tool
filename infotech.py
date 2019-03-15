@@ -81,7 +81,7 @@ def cmd_join(info, argv):
 
 def cmd_stub(_info, _argv):
     """
-    join several xml files and connect tubes
+    stub for fake/new command
     """
     print "Not implemented yet"
     return 0
