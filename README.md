@@ -21,3 +21,13 @@ $ make infotech_exe
 ```
 
 `infotech.exe` executable can be found in `dist` folder.
+
+## Use
+
+```
+> infotech.exe csv_weld fixtures\xml\1736.xml >build\1736_weld.csv
+> infotech.exe csv_defect fixtures\xml\1736.xml >build\1736_defect.csv
+> infotech.exe csv_lineobj fixtures\xml\1736.xml >build\1736_lineobj.csv
+> infotech.exe reverse fixtures\xml\1736.xml >build\1736_reverse.xml
+> infotech.exe join fixtures\xml\1736.xml 1100 fixtures\xml\1737.xml >build\1736_join.xml
+```
