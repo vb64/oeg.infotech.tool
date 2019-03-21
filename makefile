@@ -1,4 +1,4 @@
-.PHONY: all setup
+.PHONY: all setup exe
 # make tests >debug.log 2>&1
 
 ifeq ($(OS),Windows_NT)
@@ -38,7 +38,7 @@ lint:
 	$(PYTHON) -m pylint $(TESTS)/test
 	$(PYTHON) -m pylint $(SOURCE)
 
-infotech_exe:
+exe:
 	$(PYINSTALLER) --onefile infotech.py
 
 setup: setup_python setup_pip

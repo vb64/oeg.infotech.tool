@@ -17,7 +17,7 @@ $ make setup PYTHON_BIN=D:\python\2.7.15\python.exe
 ## Build infotech.exe
 
 ```
-$ make infotech_exe
+$ make exe
 ```
 
 `infotech.exe` executable can be found in `dist` folder.
