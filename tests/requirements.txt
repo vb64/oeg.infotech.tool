@@ -1,5 +1,7 @@
+pytest
+pytest-cov
 flake8
 pylint
-coverage
 twine
+coverage
 coveralls

@@ -1,5 +1,5 @@
 """
-make test T=test_console
+make test T=test_console.py
 """
 from . import TestInfotech
 

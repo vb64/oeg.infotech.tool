@@ -1,2 +1,2 @@
 pyinstaller
-oeg-infotech
+oeg-infotech>=1.4.1

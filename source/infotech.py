@@ -4,8 +4,8 @@ console client for infotech xml files processing
 import sys
 from oeg_infotech import Infotech
 
-VERSION = '1.4'
-COPYRIGHTS = 'Copyrights by Vitaly Bogomolov 2018-2019'
+VERSION = '1.5'
+COPYRIGHTS = 'Copyrights by Vitaly Bogomolov 2018-2020'
 
 
 class Commands:  # pylint: disable=old-style-class,no-init,too-few-public-methods

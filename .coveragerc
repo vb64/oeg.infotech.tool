@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = infotech
+source = source/
 
 [html]
 directory = htmlcov

@@ -7,7 +7,6 @@ install:
 - pip install -r tests/requirements.txt
 
 script:
-- python -m flake8 --max-line-length=120 infotech.py
-- python -m coverage run tests/run_tests.py
+- python -m flake8 --max-line-length=120 source
+- pytest --cov=source --cov-report term:skip-covered --durations=5 tests
 - python -m coveralls
-- python -m coverage report --skip-covered
